@@ -3,13 +3,13 @@
 $HOST = 'localhost';
 $DBNAME = 'test';
 $LOGIN = 'root';
-$PASSWORD = 'root';
+$PASSWORD = 'simplonco';
 
 // Connect to the MySQL local database
 try {
     $bdd = new PDO('mysql:host='.$HOST.';dbname='.$DBNAME.';charset=utf8', $LOGIN, $PASSWORD);
 } catch (Exception $e) {
-    die('Erreur : '.$e->getMessage()); // TODO: Recover error a bit more smootly!
+    die('Cannot connect to DB:'.$e->getMessage()); // TODO: Recover error a bit more smootly!
 }
 ?>
 
@@ -46,7 +46,7 @@ if (!$success) {
 <h2>Tasks</h2>
 
 <!-- TODO: Don't forget htmlspecialchars() -->
-<form class="form" action="/api/create_task.php?key=<?php echo $_GET['key']; ?>" method="POST">
+<form class="form" action="/api/create_task.php?key=<?php echo htmlspecialchars($_GET['key']); ?>" method="POST">
     <fieldset class="form-group">
         <label for="name">Task name:</label>
         <input id="name" name="name" placeholder="" class="form-control" />

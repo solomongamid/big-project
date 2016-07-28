@@ -2,7 +2,8 @@
 <html>
 
 <head>
-    <!-- TODO: add META markups -->
+    <!-- TODO: add META markups * -->
+    <meta charset="UTF-8">
     <link rel="stylesheet" href="/assets/css/hack.css" />
     <link rel="stylesheet" href="/assets/css/dark.css" />
 </head>

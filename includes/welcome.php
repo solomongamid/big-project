@@ -30,6 +30,6 @@
     </fieldset>
     <div class="form-actions">
         <!-- TODO: Do you know why this button not working on click? -->
-        <button type="button" class="btn btn-default btn-block btn-ghost">Retreive your game!</button>
+        <button type="submit" class="btn btn-default btn-block btn-ghost">Retreive your game!</button>
     </div>
 </form>

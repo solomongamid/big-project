@@ -5,9 +5,18 @@
  * POST:
  *  - username
  */
+function generateRandomString($LENGTH = 64) {
+    $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    $charactersLength = strlen($characters);
+    $private_key = '';
+    for ($i = 0; $i < $LENGTH; $i++) {
+        $private_key .= $characters[rand(0, $charactersLength - 1)];
+    }
+   return $private_key;
+}
 
-$LENGTH = 64; // private key length match MySQL settings
 
+/*$LENGTH = 64; // private key length match MySQL settings
 // TODO: Move in a separate generateRandomString function for example
 $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
 $charactersLength = strlen($characters);
@@ -15,19 +24,19 @@ $private_key = '';
 for ($i = 0; $i < $LENGTH; $i++) { // TODO: $LENGHT could be a parameter
     $private_key .= $characters[rand(0, $charactersLength - 1)];
 }
-
+*/
 // Database settings
 $HOST = 'localhost';
 $DBNAME = 'test';
 $LOGIN = 'root';
-$PASSWORD = 'root';
+$PASSWORD = 'simplonco';
 // TODO: Define MySQL settings only one time..
 
 // Connect to the MySQL local database
 try {
     $bdd = new PDO('mysql:host='.$HOST.';dbname='.$DBNAME.';charset=utf8', $LOGIN, $PASSWORD);
 } catch (Exception $e) {
-    die('Erreur : '.$e->getMessage()); // TODO: Recover error a bit more smootly!
+    die('Cannot connect to DB:'.$e->getMessage()); // * TODO: Recover error a bit more smootly!
 }
 
 // Create User
