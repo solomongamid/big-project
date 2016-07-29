@@ -5,6 +5,7 @@
  * POST:
  *  - username
  */
+
 function generateRandomString($LENGTH = 64) {
     $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
     $charactersLength = strlen($characters);
@@ -60,8 +61,8 @@ $req->closeCursor();
 
 <h1>Galactic Space Combat :: Successfull signup</h1><!-- TODO: What's happen if is not succesfull? -->
 
-<div class="alert alert-info">Your PRIVATE KEY is: <?php echo $private_key; ?></div>
-<p>You can login using just by using <a href="/?key=<?php echo $private_key; ?>">/?key=<?php echo $private_key; ?></a></p>
+<div class="alert alert-info">Your PRIVATE KEY is: <?php echo generateRandomString(); ?></div>
+<p>You can login using just by using <a href="/?key=<?php echo generateRandomString(); ?>">/?key=<?php echo generateRandomString(); ?></a></p>
 
 </div>
 </body>

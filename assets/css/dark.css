@@ -2,7 +2,7 @@
     color: #ccc
 }
 .dark, .dark pre {
-    background-color: #000
+    background-color:rgb(121, 56, 98)
 }
 .dark pre {
     padding: 0;
@@ -12,7 +12,7 @@
     color: #00bcd4
 }
 .dark h1 a, .dark h2 a, .dark h3 a, .dark h4 a, .dark h5 a {
-    color: #ccc
+    color: rgb(155, 149, 14)
 }
 .dark code, .dark strong {
     color: #fff
@@ -48,12 +48,12 @@
     color: #ccc
 }
 .dark .card {
-    border-color: rgba(95, 95, 95, .78)
+    border-color: rgb(155, 149, 14)
 }
 .dark .card .card-header {
     background-color: transparent;
     color: #ccc;
-    border-bottom: 1px solid rgba(95, 95, 95, .78)
+    border-bottom: 2px solid rgb(155, 149, 14)
 }
 .dark .btn.btn-ghost.btn-default {
     border-color: #ababab;
